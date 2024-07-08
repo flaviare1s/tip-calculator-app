@@ -1,0 +1,22 @@
+.selected {
+  background-color: #26C2AE;
+  color: #00474B;
+}
+
+.unselected {
+  background-color: #00474B;
+  color: #FFFFFF;
+}
+
+.custom {
+  background-color: #F3F9FA;
+  color: #547878;
+}
+
+.tips button {
+  width: 146px;
+  height: 48px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
