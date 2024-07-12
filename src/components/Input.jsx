@@ -2,7 +2,7 @@
 import { useState } from "react"
 import './Input.css'
 
-const Input = ({ title, icon, value, legend, onChange, min }) => {
+const Input = ({ title, icon, value, legend, onChange, min, placeholder }) => {
   const [error, setError] = useState('')
 
   function handleChange(value) {
@@ -23,7 +23,7 @@ const Input = ({ title, icon, value, legend, onChange, min }) => {
         className={`bg-very-light-grayish-cyan h-12 text-very-dark-cyan font-bold text-2xl text-right px-5 rounded-[5px] placeholder:text-[#00474B] border-2 border-transparent outline-none focus:border-strong-cyan ${error ? 'error' : ''}`}
         type="number"
         value={value || ''}
-        placeholder="0"
+        placeholder={placeholder}
         min={min}
         onChange={(e) => handleChange(e.target.value)}
       />
