@@ -2,12 +2,12 @@
 import { useState } from "react"
 import './Input.css'
 
-const Input = ({ title, icon, placeholder, legend, onChange, min }) => {
+const Input = ({ title, icon, value, legend, onChange, min }) => {
   const [error, setError] = useState('')
 
   function handleChange(value) {
     const numberValue = Number(value)
-    if(numberValue < min) {
+    if (numberValue < min) {
       setError("Can't be zero")
       onChange(0)
     } else {
@@ -22,11 +22,10 @@ const Input = ({ title, icon, placeholder, legend, onChange, min }) => {
       <input
         className={`bg-very-light-grayish-cyan h-12 text-very-dark-cyan font-bold text-2xl text-right px-5 rounded-[5px] placeholder:text-[#00474B] border-2 border-transparent outline-none focus:border-strong-cyan ${error ? 'error' : ''}`}
         type="number"
-        value={placeholder}
+        value={value || ''}
+        placeholder="0"
         min={min}
         onChange={(e) => handleChange(e.target.value)}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
       />
       {error && <small className="text-[#E17457] text-base font-bold absolute top-0 right-0">{error}</small>}
       <img className="absolute top-[45px] left-[20px]" src={icon} alt={legend} />
