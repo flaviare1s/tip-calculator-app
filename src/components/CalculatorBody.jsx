@@ -1,5 +1,6 @@
 import Input from "./Input"
 import Tips from "./Tips"
+import Result from "./Result"
 import dollarIcon from '../assets/icon-dollar.svg'
 import personIcon from '../assets/icon-person.svg'
 
@@ -9,6 +10,7 @@ const CalculatorBody = () => {
       <Input title='Bill' icon={dollarIcon} placeholder='0' legend='Dollar Icon' />
       <Tips />
       <Input title='Number of People' icon={personIcon} placeholder='0' legend='Person Icon' />
+      <Result />
     </section>
   )
 }

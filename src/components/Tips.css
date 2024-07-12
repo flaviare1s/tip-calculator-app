@@ -14,15 +14,10 @@
 }
 
 .tips button {
-  width: 146px;
+  width: 100%;
   height: 48px;
   border-radius: 5px;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-@media (min-width: 768px) {
-  .tips button {
-    width: 117px;
-  }
-}

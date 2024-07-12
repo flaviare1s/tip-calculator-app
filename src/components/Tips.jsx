@@ -6,7 +6,7 @@ const Tips = () => {
 
   return (
     <section className="py-8">
-      <h3 className="text-dark-grayish-cyan font-bold">Select Tip %</h3>
+      <h3 className="text-dark-grayish-cyan font-bold mb-[16px]">Select Tip %</h3>
       <div className="tips grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[311px] md:max-w-[379px] m-auto">
         <button className={tip === '5%' ? 'selected' : 'unselected'} onClick={() => setTip('5%')}>5%</button>
         <button className={tip === '10%' ? 'selected' : 'unselected'} onClick={() => setTip('10%')}>10%</button>
