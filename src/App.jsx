@@ -9,7 +9,6 @@ function App() {
       <main className='bg-light-grayish-cyan font-space flex flex-col items-center justify-center m-auto'>
         <Header />
         <CalculatorBody />
-        <Footer />
       </main>
   )
 }
