@@ -13,7 +13,7 @@ const Tips = () => {
         <button className={tip === '15%' ? 'selected' : 'unselected'} onClick={() => setTip('15%')}>15%</button>
         <button className={tip === '25%' ? 'selected' : 'unselected'} onClick={() => setTip('25%')}>25%</button>
         <button className={tip === '50%' ? 'selected' : 'unselected'} onClick={() => setTip('50%')}>50%</button>
-        <button className={tip === 'Custom' ? 'selected' : 'custom'} onClick={() => setTip('Custom')}>Custom</button>
+        <input className='bg-[#F3F9FA] text-[#547878] placeholder:text-[#547878] font-bold text-2xl text-right pr-3' type="number" placeholder='Custom' />
       </div>
     </section>
   )
