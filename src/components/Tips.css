@@ -20,3 +20,9 @@
   font-size: 1.5rem;
   font-weight: 700;
 }
+
+@media (min-width: 768px) {
+  .tips button {
+    width: 117px;
+  }
+}
