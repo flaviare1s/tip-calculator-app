@@ -3,16 +3,43 @@ import Tips from "./Tips"
 import Result from "./Result"
 import dollarIcon from '../assets/icon-dollar.svg'
 import personIcon from '../assets/icon-person.svg'
+import { useState } from "react"
 
 const CalculatorBody = () => {
+  const [bill, setBill] = useState(142.55)
+  const [people, setPeople] = useState(5)
+  const [tip, setTip] = useState(15)
+
+  function handleBillChange(value) {
+    setBill(Number(value))
+  }
+
+  function handlePeopleChange(value) {
+    setPeople(Number(value))
+  }
+
+  function handleTipChange(value) {
+    setTip(Number(value))
+  }
+
+  function handleReset() {
+    setBill(0)
+    setPeople(1)
+    setTip(0)
+  }
+
+  const tipAmount = (bill * (tip / 100)) / people 
+  const total = (bill * (1 + (tip / 100))) / people 
+
+
   return (
     <section className="bg-white p-8 md:p-[45px] w-full sm:w-[80%] md:max-w-[920px] rounded-t-[25px] md:rounded-b-[25px] md:flex md:gap-12">
       <div>
-        <Input title='Bill' icon={dollarIcon} placeholder='0' legend='Dollar Icon' />
-        <Tips />
-        <Input title='Number of People' icon={personIcon} placeholder='0' legend='Person Icon' />
+        <Input id='0' title='Bill' icon={dollarIcon} placeholder={bill} legend='Dollar Icon' onChange={handleBillChange} min={0} />
+        <Tips tip={tip} onTipChange={handleTipChange} />
+        <Input id='1' title='Number of People' icon={personIcon} placeholder={people} legend='Person Icon' onChange={handlePeopleChange} min={1} />
       </div>
-      <Result />
+      <Result tipAmount={tipAmount} total={total} onReset={handleReset} />
     </section>
   )
 }
