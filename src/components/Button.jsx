@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './Button.css'
 
 const Button = ({ onClick, isReset }) => {
