@@ -24,13 +24,14 @@ const CalculatorBody = () => {
 
   function handleReset() {
     setBill(0)
-    setPeople(1)
+    setPeople(0)
     setTip(0)
   }
 
   const tipAmount = (bill * (tip / 100)) / (people || 1) 
   const total = (bill * (1 + (tip / 100))) / (people || 1)
 
+  const isReset = bill === 0 && people === 0 && tip === 0
 
   return (
     <section className="bg-white p-8 md:p-[45px] w-full sm:w-[80%] md:w-[100%] lg:w-[920px] lg:h-[481px] rounded-t-[25px] md:rounded-b-[25px] md:flex md:gap-12 h-full">
@@ -39,7 +40,7 @@ const CalculatorBody = () => {
         <Tips tip={tip} onTipChange={handleTipChange} />
         <Input id='1' title='Number of People' icon={personIcon} value={people} legend='Person Icon' onChange={handlePeopleChange} min={1} placeholder='0' />
       </div>
-      <Result tipAmount={tipAmount} total={total} onReset={handleReset} />
+      <Result tipAmount={tipAmount} total={total} onReset={handleReset} isReset={isReset} />
     </section>
   )
 }
