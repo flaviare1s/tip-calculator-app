@@ -33,7 +33,7 @@ const CalculatorBody = () => {
 
 
   return (
-    <section className="bg-white p-8 md:p-[45px] w-full sm:w-[80%] md:w-[100%] lg:w-[920px] rounded-t-[25px] md:rounded-b-[25px] md:flex md:gap-12 h-full">
+    <section className="bg-white p-8 md:p-[45px] w-full sm:w-[80%] md:w-[100%] lg:w-[920px] lg:h-[481px] rounded-t-[25px] md:rounded-b-[25px] md:flex md:gap-12 h-full">
       <div>
         <Input id='0' title='Bill' icon={dollarIcon} value={bill} legend='Dollar Icon' onChange={handleBillChange} min={0} placeholder='0' />
         <Tips tip={tip} onTipChange={handleTipChange} />
