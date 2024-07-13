@@ -20,7 +20,7 @@ const Input = ({ title, icon, value, legend, onChange, min, placeholder }) => {
     <section className='relative flex flex-col'>
       <h3 className="text-dark-grayish-cyan font-bold mb-1.5">{title}</h3>
       <input
-        className={`bg-very-light-grayish-cyan h-12 text-very-dark-cyan font-bold text-2xl text-right px-5 rounded-[5px] placeholder:text-[#00474B] border-2 border-transparent outline-none focus:border-strong-cyan ${error ? 'error' : ''}`}
+        className={`bg-very-light-grayish-cyan h-12 text-very-dark-cyan font-bold text-2xl text-right px-5 rounded-[5px] placeholder:text-dark-grayish-cyan border-2 border-transparent outline-none focus:border-strong-cyan ${error ? 'error' : ''}`}
         type="number"
         value={value || ''}
         placeholder={placeholder}
