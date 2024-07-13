@@ -7,7 +7,7 @@ import { useState } from "react"
 
 const CalculatorBody = () => {
   const [bill, setBill] = useState(0)
-  const [people, setPeople] = useState(1)
+  const [people, setPeople] = useState(0)
   const [tip, setTip] = useState(0)
 
   function handleBillChange(value) {
@@ -28,8 +28,8 @@ const CalculatorBody = () => {
     setTip(0)
   }
 
-  const tipAmount = (bill * (tip / 100)) / people 
-  const total = (bill * (1 + (tip / 100))) / people 
+  const tipAmount = (bill * (tip / 100)) / (people || 1) 
+  const total = (bill * (1 + (tip / 100))) / (people || 1)
 
 
   return (
