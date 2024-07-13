@@ -9,7 +9,7 @@ const ResultInput = ({ title, placeholder }) => {
         type="text"
         value={placeholder}
         readOnly
-        className="bg-very-dark-cyan w-full h-12 mb-5 text-right text-[32px] font-bold text-strong-cyan placeholder:text-strong-cyan">
+        className="bg-very-dark-cyan w-full h-12 mb-5 text-right text-[32px] md:text-5xl font-bold text-strong-cyan placeholder:text-strong-cyan">
       </input>
     </section>
   )
