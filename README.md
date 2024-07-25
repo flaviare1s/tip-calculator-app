@@ -23,6 +23,10 @@ Os usuários devem ser capazes de:
 - React
 - Tailwind
 
+## Agradecimentos
+
+Agradeço ao Frontend Mentor por fornecer o desafio e o design inspirador. Também sou grata às comunidades de desenvolvedores que compartilharam dicas e feedback.
+
 ## Como Contribuir
 Contribuições são bem-vindas! Se você tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
